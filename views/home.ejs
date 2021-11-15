@@ -1,0 +1,12 @@
+<%- include("./partials/header") %>
+<h2 class="text-center mt-4">Welcome <%= user.email %></h2>
+<br />
+<div class="container mt-5 text-center">
+  <button class="btn btn-danger" id="plaid-button">Link Account</button>
+  <a href="/account_details" class="btn btn-danger">Account Details</a>
+  <a href="/balance" class="btn btn-danger">Balance</a>
+  <a href="/transactions" class="btn btn-danger">Transactions </a>
+  <a href="/logout" class="btn btn-danger">Logout</a>
+</div>
+
+<%- include("./partials/footer") %>

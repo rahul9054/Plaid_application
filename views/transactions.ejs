@@ -1,0 +1,34 @@
+<%- include("./partials/header") %>
+</div>
+
+<h1 class="page-title">TRANSACTIONS SUMMARY</h1>
+
+<div class="wrap">
+  <table class="conversion-rate-table">
+    <thead class="table__head">
+      <tr class="table__headers">
+        <th class="header" scope="col">Account Id</th>
+        <th class="header" scope="col">Transaction Id</th>
+        <th class="header" scope="col">Amount</th>
+        <th class="header" scope="col">Date</th>
+        <th class="header" scope="col">Merchant Name</th>
+      </tr>
+    </thead>
+
+    <tbody class="table__content">
+<% response.map(x => { %>
+      <tr class="table__row">
+        <td class="row__cell"><%= x.account_id %></td>
+        <td class="row__cell"><%= x.transaction_id %></td>
+        <td class="row__cell"><%= x.amount %></td>
+        <td class="row__cell"><%= x.date%></td>
+        <td class="row__cell"><%= x.merchant_name%></td>
+      </tr>
+      <% }); %>
+
+     
+    </tbody>
+  </table>
+</div>
+
+<%- include("./partials/footer") %>

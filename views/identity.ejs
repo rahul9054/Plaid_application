@@ -1,0 +1,39 @@
+<%- include("./partials/header") %>
+</div>
+
+<h1 class="page-title">BALANCE SUMMARY</h1>
+
+<div class="wrap">
+  <table class="conversion-rate-table">
+    <thead class="table__head">
+      <tr class="table__headers">
+        <th class="header" scope="col">Account Id</th>
+
+        <th class="header" scope="col">Balance</th>
+
+        <th class="header" scope="col">Account Type</th>
+
+        <th class="header" scope="col">Currency Type</th>
+      </tr>
+    </thead>
+
+    <tbody class="table__content">
+<% balance_response.map(x => { %>
+
+      <tr class="table__row">
+        <td class="row__cell"><%= x.account_id %></td>
+
+        <td class="row__cell"><%= x.balances.current %></td>
+
+        <td class="row__cell"><%= x.type %></td>
+
+        <td class="row__cell"><%= x.balances.iso_currency_code%></td>
+      </tr>
+      <% }); %>
+
+     
+    </tbody>
+  </table>
+</div>
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title-font: 'Open Sans';
+  --data-font: 'Lato';
+  --white-bone: rgb(230, 230, 230);
+  --blue: rgb(51, 131, 255);
+  --light-black: rgb(0 0 0 / 0.8);
+  --transparent-black: rgb(0 0 0 / 0.2);
+  --white: #fff;
+  --light-gray: rgb(200, 200, 200, 0.7);
+}
+
+.page-title {
+  margin: 15px 0;
+  padding: 0 0.5em;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 4vw, 3.2rem);
+  text-align: center;
+
+  color: var(--light-black);
+}
+
+/*---------------------Conversion Rate List----------------------*/
+.conversion-rate-list {
+  width: 80%;
+  margin: 25px auto;
+
+  text-align: center;
+
+  list-style: none;
+}
+
+.list-item {
+  padding-bottom: 2.5em;
+
+  border-radius: 6px;
+  box-shadow: 1px 1px 16px var(--transparent-black);
+  overflow: hidden;
+}
+
+.list-item + .list-item {
+  margin-top: 10px;
+}
+
+.platform {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.name,
+.platform {
+  font-family: var(--title-font), sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.value {
+  line-height: 1.5;
+  font-family: var(--data-font), sans-serif;
+  font-size: 2rem;
+
+  color: var(--light-black);
+}
+/*-----------------------------Conversion Rate Table---------------------------*/
+.conversion-rate-table {
+  flex-basis: min(80%, 900px);
+
+  display: none;
+
+  padding-bottom: 1em;
+
+  background-color: var(--white-bone);
+  border-radius: 6px;
+  border-collapse: collapse;
+  box-shadow: 1px 1px 16px var(--transparent-black);
+  overflow: hidden;
+}
+
+.table__headers {
+  background-color: var(--blue);
+}
+
+.header {
+  padding: 0.25rem;
+  font-family: var(--title-font), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--white);
+}
+
+.table__row:nth-child(odd) {
+  background-color: var(--white);
+}
+
+.row__cell {
+  padding: 0.5rem;
+  font-family: var(--data-font), sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.row__cell + .row__cell,
+.header + .header {
+  border-left: 1px solid var(--light-gray);
+}
+
+@media (min-width: 600px) {
+  .conversion-rate-list {
+    display: none;
+  }
+
+  .conversion-rate-table {
+    display: table;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 80vh;
+  }
+}
