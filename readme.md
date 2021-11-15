@@ -1,4 +1,4 @@
-# Plaid_Django_App
+# Plaid_Application
 
 Project Features:
 1) User signup, login, logout APIs.
@@ -21,8 +21,8 @@ Project Features:
 
 
 <blockquote>
-  Adarsh Kumar<br>
-  Email: adarshkmr0605@gmail.com
+  Rahul Khandelwal<br>
+  Email: khandelwalrahul1607@gmail.com
 </blockquote>
 
 <div align="center">
